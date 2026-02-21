@@ -1,0 +1,37 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+#define int long long 
+#define endl '\n'
+
+#ifdef ONLINE_JUDGE
+#define debug(...) 42
+#else
+#include "debug.h"
+#endif
+
+mt19937_64 RNG(chrono::steady_clock::now().time_since_epoch().count());
+
+void solve(){
+
+    int n;
+    cin>> n;
+    
+    cout<<__builtin_popcountll(n)<< endl;
+}
+
+signed main(){
+    auto begin = std::chrono::high_resolution_clock::now();
+    ios::sync_with_stdio(0);
+    cin.tie(nullptr);
+
+    int t=1;
+    //cin>> t;
+    while(t--){
+        solve();
+    }
+
+    auto end = std::chrono::high_resolution_clock::now();
+    auto elapsed = std::chrono::duration_cast<std::chrono::nanoseconds>(end - begin);
+    cerr << "Time measured: " << elapsed.count() * 1e-9 << " seconds.\n"; 
+}
